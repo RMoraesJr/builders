@@ -1,4 +1,4 @@
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -9,6 +9,11 @@
       background-color: #f4f4f4;
       color: #222;
     }
+    
+.fade-in {
+  animation: fadeInSmooth 3s ease-out forwards;
+}
+
     header {
       background-color: #111;
       padding: 30px 60px;
@@ -23,14 +28,43 @@
       font-size: 32px;
       color: #ae7f2e;
     }
-    nav a {
-      color: #fff;
-      margin-left: 30px;
-      text-decoration: none;
-      font-size: 16px;
-    }
+
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #e5c17c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+nav a.active {
+  color: #e5c17c;
+  font-weight: bold;
+}
+
+nav a.active::after {
+  transform: scaleX(1);
+}
+
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be');
       background-size: cover;
       background-position: center;
       height: 90vh;
@@ -39,12 +73,18 @@
       justify-content: center;
       text-align: center;
       color: #fff;
+      transition: background-image 1s ease;
     }
     .hero h2 {
       font-size: 48px;
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 10px;
+    }
+    .hero h2:hover {
+      color: #e5c17c;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
     .section {
       padding: 60px 40px;
@@ -93,34 +133,6 @@
       transform: scale(0.95);
       filter: brightness(1);
 }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav a {
-        margin-left: 0;
-        margin-top: 10px;
-      }
-      .hero h2 {
-        font-size: 36px;
-      }
-    }
-    @media (max-width: 480px) {
-      .hero h2 {
-        font-size: 28px;
-        padding: 15px;
-      }
-      .section {
-        padding: 40px 20px;
-      }
-      .section h3 {
-        font-size: 24px;
-      }
-      .section p {
-        font-size: 16px;
-      }
-    }
 .service-card {
   background: #1c1c1c;
   color: white;
