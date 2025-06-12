@@ -33,7 +33,36 @@
   transform: scale(1.03);
 }
 
-</style>
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.project-hero {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-hero {
+  transform: scale(1.05);
+}
+
+.project-card h4 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+  </style>
 <body class="fade-in">
 
   <header>
@@ -57,9 +86,18 @@
       Residências modernas, reformas exclusivas e espaços comerciais de alto padrão. Nosso portfólio reflete elegância, bom gosto e inovação em cada detalhe.
     </p>
     <div class="projects-gallery">
-  <img src="../img/projeto1.jpg" alt="Residência Moderna">
-  <img src="../img/projeto2.jpg" alt="Reforma de Luxo">
-  <img src="../img/projeto3.jpg" alt="Comercial Premium">
+  <div class="project-card" id="proj-mediterranean">
+    <div class="project-hero" style="background-image: url('../img/projeto1.jpg');"></div>
+    <h4>Mediterranean House</h4>
+  </div>
+  <div class="project-card" id="proj-modern">
+    <div class="project-hero" style="background-image: url('../img/projeto2.jpg');"></div>
+    <h4>Modern Villa</h4>
+  </div>
+  <div class="project-card" id="proj-classic">
+    <div class="project-hero" style="background-image: url('../img/projeto3.jpg');"></div>
+    <h4>Classic Residence</h4>
+  </div>
 </div>
 
   </section>
