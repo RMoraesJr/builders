@@ -20,11 +20,35 @@ function backgroundCarousel(selector, images, interval = 4000) {
 
 // Só executa após o DOM estar pronto
 document.addEventListener('DOMContentLoaded', function() {
-  backgroundCarousel('.hero', [
-    'img/Mediterranean style/w1024 (1).jpg',
-    'img/Mediterranean style/w1024 (10).jpg',
-    'img/Mediterranean style/w1024 (11).jpg',
-    'img/Mediterranean style/w1024 (12).jpg',
-    'img/Mediterranean style/w1024 (13).jpg'
-  ], 4000);
+  // Carrossel da Home (se existir)
+  if (document.querySelector('.hero')) {
+    backgroundCarousel('.hero', [
+      'img/Mediterranean style/w1024 (1).jpg',
+      'img/Mediterranean style/w1024 (10).jpg',
+      'img/Mediterranean style/w1024 (11).jpg',
+      'img/Mediterranean style/w1024 (12).jpg',
+      'img/Mediterranean style/w1024 (13).jpg'
+    ], 4000);
+  }
+
+  // Carrossel dos projetos (na página projetos)
+  if (document.getElementById('proj-mediterranean')) {
+    backgroundCarousel('#proj-mediterranean .project-hero', [
+      '../img/Mediterranean style/w1024 (1).jpg',
+      '../img/Mediterranean style/w1024 (10).jpg',
+      '../img/Mediterranean style/w1024 (11).jpg'
+    ], 3500);
+
+    backgroundCarousel('#proj-modern .project-hero', [
+      '../img/Modern style/modern1.jpg',
+      '../img/Modern style/modern2.jpg',
+      '../img/Modern style/modern3.jpg'
+    ], 3500);
+
+    backgroundCarousel('#proj-classic .project-hero', [
+      '../img/Classic style/classic1.jpg',
+      '../img/Classic style/classic2.jpg',
+      '../img/Classic style/classic3.jpg'
+    ], 3500);
+  }
 });
