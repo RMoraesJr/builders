@@ -1,0 +1,171 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 60px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e0a339;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #ae7f2e;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #111;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+}
+
+    .logo-img {
+      height: 100px;
+      width: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+}
+    .logo-img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+}
+    header h1:hover {
+      color: #ae7f2e;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      transform: scale(1.05);
+      filter: brightness(1.2);
+}
+    .logo-img:active {
+      transform: scale(0.95);
+      filter: brightness(1);
+}
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .hero h2 {
+        font-size: 36px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 28px;
+        padding: 15px;
+      }
+      .section {
+        padding: 40px 20px;
+      }
+      .section h3 {
+        font-size: 24px;
+      }
+      .section p {
+        font-size: 16px;
+      }
+    }
+.service-card {
+  background: #1c1c1c;
+  color: white;
+  border: 1px solid #e5c17c;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #1c1c1c;
+  color: #fff;
+  border: 1px solid #e5c17c;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(229, 193, 124, 0.2);
+}
+
+.service-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #e5c17c;
+}
+
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
